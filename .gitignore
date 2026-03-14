@@ -1,0 +1,24 @@
+# Виртуальное окружение
+.venv/
+venv/
+env/
+
+# Кэш Python (временные файлы, которые создает Python при запуске)
+__pycache__/
+*.pyc
+
+# Настройки IDE
+.idea/
+.vscode/
+
+# Отчеты о покрытии тестами
+htmlcov/
+.coverage
+.coverage.*
+
+# Системные файлы
+.DS_Store
+Thumbs.db
+
+# Файлы с секретами
+.env
