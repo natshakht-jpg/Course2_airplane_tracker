@@ -21,4 +21,4 @@ htmlcov/
 Thumbs.db
 
 # Файлы с секретами
-.env
+.env"aeroplanes.json" 
