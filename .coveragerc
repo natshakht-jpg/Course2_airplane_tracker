@@ -1,0 +1,13 @@
+[run]
+omit =
+    src/__init__.py
+
+[report]
+exclude_lines =
+    pragma: no cover
+    @abstractmethod
+    raise NotImplementedError
+    if __name__ == .__main__.:
+    except ImportError
+    def __repr__
+    @abstractproperty
