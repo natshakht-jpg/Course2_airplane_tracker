@@ -65,15 +65,16 @@ def test_get_aeroplanes_nonexistent_country(monkeypatch):
 
 
 def test_api_attributes():
-    """Тест атрибутов экземпляра API"""
+    """Тест атрибутов экземпляра API (теперь они приватные)"""
     api = AeroplanesAPI()
-    assert hasattr(api, 'openstreetmap_url')
-    assert hasattr(api, 'opensky_url')
-    assert hasattr(api, 'aeroplanes')
-    assert api.aeroplanes is None
+    # Проверяем, что приватные атрибуты существуют (через name mangling)
+    assert hasattr(api, '_AeroplanesAPI__openstreetmap_url')
+    assert hasattr(api, '_AeroplanesAPI__opensky_url')
+    assert hasattr(api, '_AeroplanesAPI__aeroplanes')
+    assert api._AeroplanesAPI__aeroplanes is None
 
 
 def test_aeroplanes_initial_none():
     """Тест: при создании экземпляра aeroplanes должен быть None"""
     api = AeroplanesAPI()
-    assert api.aeroplanes is None
+    assert api._AeroplanesAPI__aeroplanes is None

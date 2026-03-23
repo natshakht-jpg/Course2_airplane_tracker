@@ -60,7 +60,7 @@ class JSONSaver(BaseFileSaver):
         # Проверяем дубликат по icao24
         for plane in existing_planes:
             if plane.icao24 == aeroplane.icao24:
-                print(f"Самолёт с icao24 {aeroplane.icao24} уже существует. Пропускаем.")
+                # print(f"Самолёт с icao24 {aeroplane.icao24} уже существует. Пропускаем.")
                 return
 
         # Добавляем новый самолёт в список словарей для сохранения
